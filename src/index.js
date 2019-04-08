@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
             buildBody() + 
             buildFooter()
     } else {
-        console.error("ERR: Please set a div with class .indeprods selector!")
+        console.error("ERR: Please set a div with .indeprods class selector!")
     }
 })
 
