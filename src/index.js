@@ -1,4 +1,5 @@
 import css from './default.css';
+import fonts from './icono.min.css';
 
 document.addEventListener('DOMContentLoaded', function(){
     let container = document.querySelector('div.indeprods')
@@ -10,6 +11,13 @@ document.addEventListener('DOMContentLoaded', function(){
     } else {
         console.error("ERR: Please set a div with .indeprods class selector!")
     }
+
+    document.querySelector('div.indeprods .show-list').addEventListener('click', function(){
+        document.querySelector('div.indeprods').classList.add('list-mode');
+    })
+    document.querySelector('div.indeprods .hide-list').addEventListener('click', function(){
+        document.querySelector('div.indeprods').classList.remove('list-mode');
+    });
 })
 
 function buildALink(name, link) {
@@ -18,14 +26,18 @@ function buildALink(name, link) {
 
 function buildHeader() {
     return `<div class="indeprods-header">
-                <h3>友链</h3>
+                <span class="title">友链</span>
+                <a href="javascript:void(0)" class="show-list">
+                    <i class="icono-list"></i>
+                </a>
+                <a href="javascript:void(0)" class="hide-list">
+                    <i class="icono-tiles"></i>
+                </a>
             </div>`
 }
 
 function buildFooter() {
-    return `<div class="indeprods-footer">
-                <a href="https://github.com/cmlanche/indeprods-js" target="_blank">©&nbsp;独立开发者友链联盟 v1.0</a>
-            </div>`
+    return ``
 }
 
 function buildBody() {
@@ -97,11 +109,9 @@ function buildBody() {
     ]
 
     let bodyHtml = '<div class="indeprods-body">';
-    bodyHtml += '<ul>'
     for(let link of links) {
-        bodyHtml += `<li>${buildALink(link.name, link.link)}</li>`
+        bodyHtml += `<div class="box">${buildALink(link.name, link.link)}</div>`
     }
-    bodyHtml += '</ul>'
     bodyHtml += '</div>'
 
     return bodyHtml

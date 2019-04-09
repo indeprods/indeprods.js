@@ -1,33 +1,94 @@
-.indeprods {
+.indeprods a{
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.indeprods .indeprods-header h3{
-    font-size: 14px;
-    margin: 4px 0;
+.indeprods{
+	width: auto;
+	margin:30px auto 0;
+	background-color:#FFFFFF;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.indeprods .indeprods-body ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 8px 0;
+.indeprods .indeprods-header{
+	text-align:right;
+	padding:10px;
+	margin-bottom:10px;
+	background-color:#5DBA9D;
 }
 
-.indeprods .indeprods-body ul li a{
-    text-decoration: none;
-    font-size: 13px;
-    color: #333;
+.indeprods .indeprods-header .title {
+    float: left;
+    padding:10px;
+	margin-bottom:10px;
 }
 
-.indeprods .indeprods-body ul li a:hover {
-    text-decoration: underline;
+.indeprods .indeprods-header a{
+	font-size:20px;
+	color:#FFFFFF;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	margin-left:10px;
+	text-align:center;
+	display:inline-block;
 }
 
-.indeprods .indeprods-footer a {
-    font-size: 10px;
-    text-decoration: none;
-    color: lightgray;
+.indeprods .indeprods-header a:hover, 
+.list-mode header a.hide-list:hover{
+	background-color:#11956c;
 }
 
-.indeprods .indeprods-footer a:hover {
-    text-decoration: underline;
+.indeprods .indeprods-header a.hide-list{
+	background-color:#11956c;
 }
+
+.list-mode .indeprods-header a.hide-list{
+	background-color:#5DBA9D;
+}
+
+.list-mode .indeprods-header a.show-list{
+	background-color:#11956c;
+}
+
+.indeprods .indeprods-body:after{
+	content:"";
+	clear:both;
+	display:table;
+}
+
+.indeprods .indeprods-body{
+	padding:10px 0 10px 10px;
+}
+
+.indeprods .box{
+	float:left;
+	width:100px;
+	height:100px;
+	margin:0 10px 10px 0;
+	background-color:#CCCCCC;
+	-webkit-transition:all 1.0s ease;
+	-moz-transition:all 1.0s ease;
+	transition:all 1.0s ease;
+	transition:all 1.0s ease;
+}
+
+.indeprods.list-mode .container{
+	padding-right:10px;
+}
+
+.indeprods.list-mode .box{
+	width:100%;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
